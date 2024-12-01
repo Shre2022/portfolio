@@ -1,0 +1,38 @@
+@use '../partials/colors';
+@use '../partials/media-query';
+@use '../partials/typography';
+
+.skills {
+	@extend %light-on-dark;
+	@include mixins.flex-it(column, center, flex-start);
+	@include mixins.headings;
+
+	// Scrolls over landing
+	z-index: 1;
+
+	// skills__card contains each stack item
+	&__card {
+		@extend %margin-sides;
+		margin: 0px auto;
+
+		// Single column on small screens
+		@include mixins.flex-it(column, center, center);
+
+		@include responsive.sm-up {
+			// Centered and wrapped for responsiveness
+			@include mixins.flex-it(row, center, space-around, wrap);
+		}
+
+		// Class for each item (logo + text)
+		&--item {
+			font-size: 1.5em;
+			margin: 10px;
+
+			@include mixins.flex-it(row, center, center, nowrap);
+
+			&-text {
+				margin-left: 10px;
+			}
+		}
+	}
+}

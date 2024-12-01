@@ -19,33 +19,44 @@
 }
 
 .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   box-sizing: border-box;
   position: fixed;
   top: 0;
-  z-index: 2;
+  z-index: 0;
   height: 60px;
   width: 100%;
-  transition: 1s;
+  padding: 20px;
+  background-color: #cccccc;
+  font-family: "Roboto";
 }
 .navbar__logo {
-  position: fixed;
-  padding: 10px;
-  margin-left: 1vw;
-  width: 100px;
-  height: 100px;
+  position: absolute;
 }
 .navbar__links {
   list-style: none;
   display: flex;
-  font-weight: bold;
-  position: relative;
-  gap: 1rem;
+  gap: 20px;
 }
 .navbar__links a {
   text-decoration: none;
 }
-.hero {
+.footer {
   display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer__about__signature {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  width: 100%;
+  padding: 15px;
+  background-color: #cccccc;
+  font-family: "Roboto";
 }
 
 /*# sourceMappingURL=style.css.map */

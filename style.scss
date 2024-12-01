@@ -1,32 +1,38 @@
 @use "./partials/colors";
 @use './partials/media-query';
 @use './partials/typography';
+
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+
+
 
 // Nav section
 .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   box-sizing: border-box;
   position: fixed;
   top: 0;
-  z-index: 2;
+  z-index: 0;
   height: 60px;
   width: 100%;
-  transition: 1s;
+  padding: 20px;
+  background-color: #cccccc;
+  font-family: "Roboto";
   // justify-content: flex-end;
 
   &__logo {
-    position: fixed;
-    padding: 10px;
-    margin-left: 1vw;
-    width: 100px;
-    height: 100px;
+    position: absolute;
+    // top: 10px;
+    // padding: 10px;
+
   }
   &__links {
     list-style: none;
     display: flex;
-    font-weight: bold;
-    position: relative;
-    gap: 1rem;
+    gap: 20px;
 
     a {
       text-decoration: none;
@@ -36,13 +42,28 @@
         // color: darken($color-grey, 20%);
       }
   }
-  &--hamburger {
-    // color: $color-creole;
+
   }
 }
-}
+//   &--hamburger {
+//     // color: $color-creole;
+//   }
 
-//hero
-.hero {
+
+.footer {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  &__about__signature {
+    display: flex;
+    // font-style: bold;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    width: 100%;
+    padding: 15px;
+    background-color: #cccccc;
+    font-family: "Roboto";
+  }
 }

@@ -1,0 +1,48 @@
+@use "./partials/colors";
+@use './partials/media-query';
+@use './partials/typography';
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+// Nav section
+.navbar {
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  height: 60px;
+  width: 100%;
+  transition: 1s;
+  // justify-content: flex-end;
+
+  &__logo {
+    position: fixed;
+    padding: 10px;
+    margin-left: 1vw;
+    width: 100px;
+    height: 100px;
+  }
+  &__links {
+    list-style: none;
+    display: flex;
+    font-weight: bold;
+    position: relative;
+    gap: 1rem;
+
+    a {
+      text-decoration: none;
+      // color: $color-grey;
+
+      :hover {
+        // color: darken($color-grey, 20%);
+      }
+  }
+  &--hamburger {
+    // color: $color-creole;
+  }
+}
+}
+
+//hero
+.hero {
+  display: flex;
+}

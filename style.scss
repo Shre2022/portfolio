@@ -1,11 +1,31 @@
 @use "./partials/colors";
 @use './partials/media-query';
 @use './partials/typography';
+@use './modules/contact';
+@use './modules/mixin.scss';
 
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
 
 
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+p {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.main-section {
+  height: 100vh;
+  width: 100%;
+  padding: 1em;
+}
 
+.sub-heading {
+  text-align: center;
+
+}
 
 // Nav section
 .navbar {
@@ -33,21 +53,24 @@
     list-style: none;
     display: flex;
     gap: 20px;
+    font-weight: bold;
+    color: colors.$creole;
 
     a {
       text-decoration: none;
-      // color: $color-grey;
+      // color: $colors.$grey;
 
-      :hover {
-        // color: darken($color-grey, 20%);
+      &:hover {
+        color: darken(colors.$creole, 20%);
       }
   }
 
   }
+
+  &--hamburger {
+    color: colors.$creole;
+  }
 }
-//   &--hamburger {
-//     // color: $color-creole;
-//   }
 
 
 .footer {
@@ -57,7 +80,6 @@
   
   &__about__signature {
     display: flex;
-    // font-style: bold;
     justify-content: center;
     align-items: center;
     height: 60px;
@@ -65,5 +87,6 @@
     padding: 15px;
     background-color: #cccccc;
     font-family: "Roboto";
+    font-weight: bold;
   }
 }

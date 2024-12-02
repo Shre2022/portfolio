@@ -1,0 +1,31 @@
+@use './../partials/colors';
+@use './../partials/media-query';
+
+
+// skills section
+
+.skills {
+	&__list {
+    text-wrap: nowrap;
+    display: flex;
+		height: 40vh;
+    width: 100vh;
+		display: grid;
+    background-color: colors.$silver;
+		grid-template-columns: repeat(10, 1fr);
+		justify-items: center;
+		align-items: center;
+    flex-direction: row;
+		border-left-style: solid;
+		border-right-style: solid;
+		margin: 10vh 20vh;
+    // gap: 0.5em;
+
+		&__item {
+			height: 100px;
+			width: 100%;
+			font-size: 90px;
+		}
+	}
+	}
+ 

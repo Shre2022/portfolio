@@ -1,0 +1,106 @@
+@use '../partials/colors';
+@use '../partials/typography';
+@use '../partials/media-query';
+@use './../modules/mixin.scss';
+
+.contact-section {
+  background-color: colors.$iery-orange;
+  display: flex;
+  // grid-area: auto;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3em;
+  height: 800px;
+
+  &-social {
+    h2 {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 2em;
+      width: 100%;
+    }
+  
+  }
+  .sub-heading {
+    font-weight: bold;
+  }
+
+  .form {
+    display: flex;
+    font-size: 1.5em;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-items: center;
+    gap: 1em;
+    min-width: 65%;
+    // border: 3px none colors.$creole;
+    font-family: Roboto;
+    font-weight: normal;
+    input,
+    textarea {
+      color: colors.$creole;
+      background-color: colors.$white;
+      border: none;
+      width: auto;
+      border-radius: 5px;
+      font-size: 1.2em;
+    }
+
+    .field {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      gap: 2em;
+      width: 100vh;
+    }
+
+    .field__vertical {
+      flex-direction: column;
+      gap: 1em;
+      height: auto;
+    }
+  }
+
+  .button {
+    padding: 5px 10px;
+    font-size: 4em;
+    border: 1px solid colors.$silver;
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+    background-color: colors.$silver;
+    color: colors.$grey;
+    &:hover {
+      transform: scale(1.1);
+      background-color: colors.$creole;
+    }
+  }
+
+// }
+
+  ul{
+    .social {
+      display: flex;
+      justify-content: center;
+      align-items:center;
+      font-size: larger;
+
+    .li {
+        gap: 10px;
+        display: flex;
+        // justify-content: space-around;
+        // align-items: center;
+        font-size: 1.5em;
+        color: colors.$creole;
+      }
+    }
+  }
+   
+    &:hover {
+      transform: scale(1.1);
+      background-color: colors.$grey;
+}
+}

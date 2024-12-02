@@ -3,7 +3,7 @@
 @use './partials/typography';
 @use './modules/contact';
 @use './modules/mixin.scss';
-@use './modules/skills';
+@use './modules/tech-skills';
 
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
 
@@ -16,23 +16,25 @@ html {
 }
 
 h1 {
-  font-size: 1.7em;
+  // font-size: 3em;
   font-weight: bold;
   color: colors.$creole;
   margin-bottom: 16px;
+  justify-content: center;
+  align-items: center;
+  // text-align: center;
 }
 
-
 h2 {
-  font-size: 1.7em;
-  font-weight: bold;
+  // font-size: 2em;
+  // font-weight: bold;
   color: colors.$creole;
   margin-bottom: 16px;
 }
 
 p {
   font-family: Roboto;
-  font-size: 1.2em;
+  font-size: 1.5em;
 }
 .main-section {
   height: 100vh;
@@ -53,75 +55,92 @@ p {
   align-items: center;
   gap: 2rem;
 
-  &__text {
-    font-weight:bold;
-    font-size: large;
-    justify-content: left;
-    text-align: left;
-    margin-bottom: 16px;
-    margin-right: 20px;
+.wave {
+  animation-name: wave-animation;
+  animation-duration: 2.5s;
+  animation-iteration-count: infinite;
+  transform-origin: 70% 70%;
+  display: inline-block;
+  }
+    
+    @keyframes wave-animation {
+      0% { transform: rotate( 0.0deg) }
+      15% { transform: rotate(14.0deg) }  /* The following five values can be played with to make the waving more or less extreme */
+      30% { transform: rotate(-8.0deg) }
+      40% { transform: rotate(14.0deg) }
+      50% { transform: rotate(-4.0deg) }
+      60% { transform: rotate(10.0deg) }
+      70% { transform: rotate( 0.0deg) }  /* Reset for the last half to pause */
+     100% { transform: rotate( 0.0deg) }
+    }
   }
 
-  .container {
-    display: flex;
+  .hero__container {
     align-items: center;
     width: 100%;
-    padding: 20px;
-    margin: 0 auto;
+    // padding: 20px;
 
-    &--white {
-      display: flex;
-      align-items: center;
-      background-color: colors.$white;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: flex-start;
-    }
-    &--image {
-      background-image: url(./images/hero-img.jpg);
-      height: 500px;
-      background-position: center;
-      // gap: 5rem;
-    }
-    .h1 {
-      font-size: 10rem;
-      white-space: nowrap;
-      position: left;
-      line-break: auto;
+    // &--white {
+    //   display: flex;
+    //   align-items: center;
+    //   background-color: colors.$white;
+    //   display: flex;
+    //   flex-direction: column;
+    //   justify-content: center;
+    //   align-items: flex-start;
+    //   font-size: 5em;
+    // }
+    &--text {
+      // display:contents;
+      // text-align: justify;
+      font-size: 5em;
+
+      &-img {
+        display: flex;
+        // gap: 1em;
+        // height: 600px;
+        background-image: url(./images/hero-img.jpg);
+        background-size: cover;
+        // background-position: center;
+        // &::after {
+        //   content: '';
+        //   top: 0;
+        //   left: 0;
+        //   position: absolute;
+      //     background-color: rgba(0, 0, 0, 0.35);
+      //     z-index: 1;
+      //     height: 100%;
+      //     width: 100%;
+      //   }
+      }
     }
   
-    .hero-img {
-      float: right;
-    }
+    
   }
   
     .hero__button {
-      background-color: colors.$creole;
-      border: none;
+      background-color: colors.$iery-orange;
+      border: 3 px solid colors.$creole;
       padding: 0.5rem 1rem;
       cursor: pointer;
       text-wrap: wrap;
       font-size: 1.5rem;
       font-weight: bold;
-      color: White;
-      border: 5px solid white;
-      position: left;
-      gap: 1.5em;
-  
-      // &:hover {
-      //   background-color: lighten($silver, 10%);
-      // }
-    }
-  }
+      color: colors.$white;
+      border: 5px solid colors.$silver;
+      border-radius: 5px;
 
+      &:hover {
+        background-color: colors.$creole;
+      }
+    }
+  
 
 
 // Nav section
 .navbar {
-  height: 8px;
+  height: 80px;
   width: 100%;
-  padding: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -141,20 +160,21 @@ p {
 
   }
   &__links {
+    font-size: 1em;
     list-style: none;
     display: flex;
     gap: 20px;
     font-weight: bold;
     color: colors.$creole;
 
-  //   a {
-  //     text-decoration: none;
-  //     // color: $colors.$grey;
+    a {
+      text-decoration: none;
+      color: colors.$grey;
 
-  //     &:hover {
-  //       color: colors.$creole;
-  //     }
-  // }
+      &:hover {
+        color: colors.$creole;
+      }
+  }
 
   }
 
@@ -170,12 +190,66 @@ p {
   }
 }
 
+// Project Section
+  .projects {
+  // background-color: colors.$silver;
+  border: 1px none #cccccc;
+  justify-content: space-around;
+  align-items: center;
+  margin: 15px;
+  margin-bottom: 30px;
+  padding: 40px;
+ }
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+.project-card {
+  flex: 1 1 300px;
+  margin-bottom: 20px;
+  flex-direction: column;
+  border: 3px solid colors.$silver;
+  // gap: 15px;
+  border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+    img {
+      width: 80%;
+      height: auto;
+      margin-bottom: 10px;
+      justify-content: center;
+      align-items: center;
+    }
+
+    h3 {
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1.5em;
+      line-height: 1.5;
+      margin-bottom: 10px;
+    }
+
+    a {
+      color: colors.$grey;
+      text-decoration: none;
+      &:hover {
+        color: colors.$creole;
+      }
+    }
+  }
+}
 
 .footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  
+
   &__signature {
     display: flex;
     justify-content: center;

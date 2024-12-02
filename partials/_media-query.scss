@@ -1,30 +1,30 @@
 //media query sizes
 
-$sm: 550px; // phone
-$md: 770px; // tablet
-$lg: 901px; // laptop
-$xl: 1024px; // desktop
+$phone: 550px; // phone
+$tablet: 770px; // tablet
+$laptop: 901px; // laptop
+$desktop: 1024px; // desktop
 
-@mixin sm {
-	@media only screen and (min-width: $sm) {
+@mixin phone {
+	@media only screen and (min-width: $phone) {
 		@content;
 	}
 }
 
-@mixin md {
-	@media only screen and (min-width: ($md)) {
+@mixin tablet {
+	@media only screen and (min-width: ($tablet)) {
 		@content;
 	}
 }
 
-@mixin lg {
-	@media only screen and (min-width: $lg) {
+@mixin laptop {
+	@media only screen and (min-width: $laptop) {
 		@content;
 	}
 }
 
-@mixin xl {
-	@media only screen and (min-width: $xl) {
+@mixin desktop {
+	@media only screen and (min-width: $desktop) {
 		@content;
 	}
 }

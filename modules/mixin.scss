@@ -1,1 +1,14 @@
+@use './../partials/colors';
 
+
+@mixin link-styling {
+  text-decoration: none;
+  color: colors.$white;
+}
+
+@mixin flex {
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}

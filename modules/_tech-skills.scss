@@ -1,71 +1,31 @@
 @use './../partials/colors';
 @use './../partials/media-query';
-// @use "./mixins.scss";
 
-// Tech-skills section
 
-.tech-skills {
+// skills section
+
+.skills {
 	&__list {
-		height: 70vh;
+    text-wrap: nowrap;
+    display: flex;
+		height: 40vh;
+    width: 100vh;
 		display: grid;
-		grid-template-columns: repeat(5, 1fr);
-		grid-template-rows: repeat(3, 1fr);
+    background-color: colors.$silver;
+		grid-template-columns: repeat(10, 1fr);
 		justify-items: center;
 		align-items: center;
-		border-color: colors.$white;
+    flex-direction: row;
 		border-left-style: solid;
 		border-right-style: solid;
 		margin: 10vh 20vh;
+    // gap: 0.5em;
 
 		&__item {
-			height: 90px;
-			width: 90px;
-			font-size: 80px;
-			@include mixins.flex;
+			height: 100px;
+			width: 100%;
+			font-size: 90px;
 		}
 	}
-
-	@media only screen and (max-width: device.$tablet) {
-		&__list {
-			height: 80vh;
-			display: grid;
-			grid-template-columns: repeat(3, 1fr);
-			grid-template-rows: repeat(4, 1fr);
-			justify-items: center;
-			align-items: center;
-			border-color: colors.$white;
-			border-left-style: solid;
-			border-right-style: solid;
-			margin: 5vh;
-
-			&__item {
-				font-size: 70px;
-				margin: auto;
-
-				img {
-					width: 80%;
-				}
-			}
-		}
 	}
-
-	@media only screen and (max-width: device.$phone) {
-		&__list {
-			display: grid;
-			grid-template-columns: repeat(2, 1fr);
-			grid-template-rows: repeat(3, 1fr);
-			margin-bottom: 2vh;
-
-			&__item {
-				font-size: 48px;
-				padding: 2vh 0;
-				@include mixins.flex;
-
-				img {
-					width: 50%;
-					margin: auto;
-				}
-			}
-		}
-	}
-}
+ 

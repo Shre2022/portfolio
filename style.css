@@ -1,163 +1,17 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
-.roboto-regular {
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
+/* Error: Can't find stylesheet to import.
+ *   ,
+ * 6 | @use './modules/skills';
+ *   | ^^^^^^^^^^^^^^^^^^^^^^^
+ *   '
+ *   style.scss 6:1  root stylesheet */
 
-.roboto-medium {
-  font-family: "Roboto", sans-serif;
-  font-weight: 500;
-  font-style: normal;
-}
-
-.roboto-bold {
-  font-family: "Roboto", sans-serif;
-  font-weight: 700;
-  font-style: normal;
-}
-
-.contact-section {
-  background-color: #ae5d13;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 3em;
-  height: 600px;
-}
-.contact-section .sub-heading {
-  font-weight: bold;
-}
-.contact-section .form {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  align-items: center;
-  gap: 1em;
-  min-width: 65%;
-  border: 3px none #0c0801;
-  font-family: Roboto;
-  font-weight: bold;
-}
-.contact-section .form input,
-.contact-section .form textarea {
-  color: #0c0801;
-  background-color: #ffffff;
-  border: none;
-  width: auto;
-  border-radius: 5px;
-}
-.contact-section .form .field {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  gap: 2em;
-  width: 100vh;
-}
-.contact-section .form .field__vertical {
-  flex-direction: column;
-  gap: 1em;
-  height: auto;
-}
-.contact-section .button {
-  padding: 5px 10px;
-  border: none;
-  border-radius: 5px;
-  justify-content: center;
-  align-items: center;
-  background-color: #cccccc;
-  color: #cccccc;
-}
-.contact-section .button:hover {
-  transform: scale(1.1);
-  background-color: #8f8e8e;
-}
-.contact-section--social h3 {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 2em;
-  width: 100%;
-}
-.contact-section ul .social {
-  display: inline;
-  font-size: larger;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-p {
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-.main-section {
-  height: 100vh;
-  width: 100%;
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
   padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Can't find stylesheet to import.\a   \2577 \a 6 \2502  @use './modules/skills';\d\a   \2502  ^^^^^^^^^^^^^^^^^^^^^^^\a   \2575 \a   style.scss 6:1  root stylesheet";
 }
-
-.sub-heading {
-  text-align: center;
-}
-
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  box-sizing: border-box;
-  position: fixed;
-  top: 0;
-  z-index: 0;
-  height: 60px;
-  width: 100%;
-  padding: 20px;
-  background-color: #cccccc;
-  font-family: "Roboto";
-}
-.navbar__logo {
-  position: absolute;
-}
-.navbar__links {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-  font-weight: bold;
-  color: #0c0801;
-}
-.navbar__links a {
-  text-decoration: none;
-}
-.navbar__links a:hover {
-  color: black;
-}
-.navbar--hamburger {
-  color: #0c0801;
-}
-
-.footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.footer__about__signature {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 60px;
-  width: 100%;
-  padding: 15px;
-  background-color: #cccccc;
-  font-family: "Roboto";
-  font-weight: bold;
-}
-
-/*# sourceMappingURL=style.css.map */

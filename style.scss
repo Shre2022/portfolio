@@ -15,6 +15,14 @@ html {
   scroll-behavior: smooth;
 }
 
+h1 {
+  font-size: 1.7em;
+  font-weight: bold;
+  color: colors.$creole;
+  margin-bottom: 16px;
+}
+
+
 h2 {
   font-size: 1.7em;
   font-weight: bold;
@@ -24,6 +32,7 @@ h2 {
 
 p {
   font-family: Roboto;
+  font-size: 1.2em;
 }
 .main-section {
   height: 100vh;
@@ -45,19 +54,24 @@ p {
   gap: 2rem;
 
   &__text {
-    font-weight: bold;
+    font-weight:bold;
     font-size: large;
-    justify-content: flex-end;
-    text-align: end;
+    justify-content: left;
+    text-align: left;
     margin-bottom: 16px;
+    margin-right: 20px;
   }
 
   .container {
-    width: 80%;
+    display: flex;
+    align-items: center;
+    width: 100%;
     padding: 20px;
     margin: 0 auto;
 
     &--white {
+      display: flex;
+      align-items: center;
       background-color: colors.$white;
       display: flex;
       flex-direction: column;
@@ -68,6 +82,7 @@ p {
       background-image: url(./images/hero-img.jpg);
       height: 500px;
       background-position: center;
+      // gap: 5rem;
     }
     .h1 {
       font-size: 10rem;
@@ -94,9 +109,9 @@ p {
       position: left;
       gap: 1.5em;
   
-      &:hover {
-        background-color: lighten($silver, 10%);
-      }
+      // &:hover {
+      //   background-color: lighten($silver, 10%);
+      // }
     }
   }
 
@@ -104,6 +119,9 @@ p {
 
 // Nav section
 .navbar {
+  height: 8px;
+  width: 100%;
+  padding: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -111,12 +129,10 @@ p {
   position: fixed;
   top: 0;
   z-index: 0;
-  height: 60px;
-  width: 100%;
-  padding: 20px;
   background-color: #cccccc;
   font-family: "Roboto";
   // justify-content: flex-end;
+  text-align: justify;
 
   &__logo {
     position: absolute;
@@ -131,14 +147,14 @@ p {
     font-weight: bold;
     color: colors.$creole;
 
-    a {
-      text-decoration: none;
-      // color: $colors.$grey;
+  //   a {
+  //     text-decoration: none;
+  //     // color: $colors.$grey;
 
-      &:hover {
-        color: darken(colors.$creole, 20%);
-      }
-  }
+  //     &:hover {
+  //       color: colors.$creole;
+  //     }
+  // }
 
   }
 
@@ -150,16 +166,17 @@ p {
 .article {
   display: flex;
   &__title {
-    font-size: larger;
+    font-size: 1.5em;
   }
 }
+
 
 .footer {
   display: flex;
   justify-content: center;
   align-items: center;
   
-  &__about__signature {
+  &__signature {
     display: flex;
     justify-content: center;
     align-items: center;

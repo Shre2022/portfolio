@@ -56,27 +56,28 @@
     border-radius: 5px;
     justify-content: center;
     align-items: center;
-    background-color: colors.$silver;
-    color: colors.$silver;
+    background-color: colors.$grey;
+    color: colors.$grey;
     &:hover {
       transform: scale(1.1);
-      background-color: colors.$grey;
+      background-color: colors.$creole;
     }
   }
-  &--social {
-    h3 {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      gap: 2em;
-      width: 100%;
-    }
+//   &--social {
+//     h2 {
+//       display: flex;
+//       flex-direction: column;
+//       justify-content: center;
+//       gap: 2em;
+//       width: 100%;
+//     }
   
-}
+// }
 
   ul{
     .social {
-      display: inline;
+      display: flex;
+      justify-content: space-between;
       font-size: larger;
     }  
   }
